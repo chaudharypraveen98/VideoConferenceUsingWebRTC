@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC Conference Room</title>
+  </head>
+  <body>
+    <h1 class="head">VideoConference with WebRTC</h1>
+    <div class="start-connection-container">
+      <h3>1. Start your Webcam</h3>
+      <button id="webcamButton">Start webcam</button>
+    </div>
+
+    <div class="video-container">
+      <div class="local-cam">
+        <div id="local-cam-detail">
+          <h3>Local Stream</h3>
+          <h2>Please start the camera</h2>
+        </div>
+        <video id="webcamVideo" autoplay playsinline></video>
+      </div>
+      <div class="remote-cam">
+        <div id="remote-cam-detail">
+          <h3>Remote Stream</h3>
+          <h2>Please ask other to join</h2>
+        </div>
+        <video id="remoteVideo" autoplay playsinline></video>
+      </div>
+    </div>
+
+    <div class="create-connection-container">
+      <h3>2. Create a new Call</h3>
+      <button id="callButton" disabled>Create Call (offer)</button>
+    </div>
+
+    <div class="create-connection-container">
+      <h2>3. Join a Call</h2>
+      <p>Answer the call from a different browser window or device</p>
+    </div>
+
+    <input id="callInput" />
+    <button id="answerButton" disabled>Answer</button>
+
+    <h2>4. Hangup</h2>
+
+    <button id="hangupButton" disabled>Hangup</button>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
